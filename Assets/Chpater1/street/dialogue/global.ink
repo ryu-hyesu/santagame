@@ -1,0 +1,1 @@
+VAR NextSence = 0

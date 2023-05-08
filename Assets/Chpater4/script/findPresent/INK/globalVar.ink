@@ -1,0 +1,1 @@
+VAR next = 0
