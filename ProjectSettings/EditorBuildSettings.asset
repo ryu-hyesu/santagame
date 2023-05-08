@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: "Assets/\uCC45\uC7A5/bookshelf/Book_start.unity"
+    guid: 3258636f4c4ca794ba423dfc0bd4a814
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/street.unity
+    guid: ab2c3fc2f4f37764cb8d9cbce18d9acb
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/5_game1.unity
+    guid: 4aab029bdc3294f42b9cf26cdd4e0c41
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/12_game2.unity
+    guid: 58f1e643b690e1942a7a46c69596697c
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/1_livingroom.unity
+    guid: 48e145edd4f2ebc46b15172e985cd814
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/9_livingroom.unity
+    guid: 36ba478c04922f5409bde5b9e40c3f98
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/4_children.unity
+    guid: 9ef2bb70a123c8a48a72f6f8e3e5d972
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/6_children.unity
+    guid: e1d2451c5b8abd2448367866e6d6db8a
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/16_children.unity
+    guid: e4615673921ff1a43b802227b191fa91
+  - enabled: 1
+    path: Assets/Scenes/Chapter4/EndShip.unity
+    guid: 5043e98ceae411d4e882abee1ead8db8
+  - enabled: 1
+    path: Assets/Scenes/Chapter4/findPresent.unity
+    guid: bbe2bbb9f51fe1a4ea25d7f8bb58b632
+  - enabled: 1
+    path: Assets/Scenes/Chapter4/game4.unity
+    guid: f4d9cb6413fe0e1449f4a4bfdb0909bd
+  - enabled: 1
+    path: Assets/Scenes/Ending/Ending.unity
+    guid: 8d8bca896abbd8c479db931ee4ab430f
+  - enabled: 1
+    path: Assets/Scenes/Chapter3/ch3_game.unity
+    guid: a2d435f3e34177540b6740f9182bb5bd
+  - enabled: 1
+    path: Assets/Scenes/Chapter3/ch3_dialogue.unity
+    guid: 36ab76bfb17417c4bafaf6746a90f86a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/cake.unity
+    guid: 28e7106235f71474ab7f9165d11b5f53
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/croc.unity
+    guid: 73f1b09d1cf81844a9b962dcb11c483b
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/puzzle.unity
+    guid: 287991db1d27c5a4d9b8186dd979be6b
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/New Scene.unity
+    guid: 71067cc01c6099f43a4e1b80dba72f6f
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/SHIP.unity
+    guid: 845b246373f80b248aa325b1f8e95bbd
+  - enabled: 1
+    path: Assets/Scenes/Chapter2/cakeGame.unity
+    guid: 2907b6d09dd33ea4faf0501f221245ae
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/11_kitchen.unity
+    guid: a7e3b20e4c8840c44a456f47d93f8bd8
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/2_hallway1F.unity
+    guid: ea214cf985f67f24487e1d1750cfafb4
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/3_hallway2F.unity
+    guid: 8ca5f6f3cae333e429763fc804a1e656
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/7_hallway2F.unity
+    guid: 2a7d0d744f0e00e4497fdbe7dc007812
+  - enabled: 1
+    path: "Assets/\uBA54\uC778\uBA54\uB274/sences/options.unity"
+    guid: 98d2eb7e77f10e94b95f3a01062070ae
+  - enabled: 1
+    path: "Assets/\uBA54\uC778\uBA54\uB274/sences/main_1.unity"
+    guid: 6599777e4f75bab46addec28418cb79e
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/8_hallway1F.unity
+    guid: ed9a6a29ac6142842b21c75826611716
+  - enabled: 1
+    path: "Assets/\uBA54\uC778\uBA54\uB274/sences/loading.unity"
+    guid: b1a4512b28f8fbc45981427fce5cc0b7
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/10_hallway1F.unity
+    guid: fcb6ff5fc2651994cadd210a20600ad1
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/13_kitchen.unity
+    guid: a479e0f32eaa0554b88aeec773aee0a7
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/14_hallway1F.unity
+    guid: b909154b32fc2a8498c30f8e17ea2502
+  - enabled: 1
+    path: Assets/Scenes/Chapter1/house/15_hallway2F.unity
+    guid: 3fb1e9f55a82faa4084d25172a866751
+  m_configObjects: {}
