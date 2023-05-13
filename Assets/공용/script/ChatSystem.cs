@@ -58,6 +58,7 @@ public class ChatSystem : MonoBehaviour
     //ch3
     public bool activateChoices = false;
     public bool madeChoices = true;
+    public GameObject btnBackground;
 
     private void Awake(){
         scene = SceneManager.GetActiveScene();    //현재 무슨 씬인지
@@ -234,7 +235,6 @@ public class ChatSystem : MonoBehaviour
 
     public void ShowChoices(){
         List<Choice> currentChoices = currentStory.currentChoices;
-
         if(currentChoices.Count > 0)
             panel.SetActive(true);
         else
@@ -270,7 +270,9 @@ public class ChatSystem : MonoBehaviour
         }
         int index = 0;
         foreach(Choice choice in currentChoices){
-            if(quad) Destroy(quad);
+            //if(quad) Destroy(quad);
+            if(index==0)
+                btnBackground.SetActive(true);
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
@@ -292,6 +294,8 @@ public class ChatSystem : MonoBehaviour
 
         if(scene.name == "ch3_dialogue"){
             for(int i=0;i<choices.Length;i++){
+                if(i==0)
+                    btnBackground.SetActive(false);
                 choices[i].gameObject.SetActive(false);
             }
         }
@@ -324,4 +328,7 @@ public class ChatSystem : MonoBehaviour
         throw new NotImplementedException();
     }
     */    
+    public void destroy(){
+        if(quad) Destroy(quad);
+    }
 }

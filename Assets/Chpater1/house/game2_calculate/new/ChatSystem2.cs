@@ -47,6 +47,7 @@ public class ChatSystem2 : MonoBehaviour
     //효과음
     AudioSource audioSoure;
     Scene scene;
+    Color color;
 
     public bool activateChoices = false;
     public bool madeChoices = true;
@@ -70,6 +71,7 @@ public class ChatSystem2 : MonoBehaviour
     {
         dialogueIsPlaying = false;
         //quizManager = GameObject.Find("QuizManager").GetComponent<QuizManager>();
+        color = image.color;
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -136,6 +138,9 @@ public class ChatSystem2 : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
+        color.a = 0;
+        image.color = color;
+        
         timeOver = true;
         remainTimeTextUI.SetActive(false);
         //remainTimeTextUI.GetComponent<RemainTime>().rTime = 10f;
@@ -271,6 +276,11 @@ public class ChatSystem2 : MonoBehaviour
             //if (quad) Destroy(quad);
             timeOver = false;
             choices[index].gameObject.SetActive(true);
+            
+            image.gameObject.SetActive(true);           
+            color.a = 0.2f;
+            image.color = color;
+
             isShow = true;
             remainTimeTextUI.SetActive(true);
             choicesText[index].text = choice.text;
@@ -307,6 +317,9 @@ public class ChatSystem2 : MonoBehaviour
         
         for (int i=0;i<choices.Length;i++){
             choices[i].gameObject.SetActive(false);
+            
+            color.a = 0;
+            image.color = color;
         }
     }
 

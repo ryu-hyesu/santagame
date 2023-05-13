@@ -74,7 +74,7 @@ public class playerMoving : MonoBehaviour
                 anim.SetBool("IsJumping", false);
             }
         }else if(scene.name == "ch3_game"){
-            if(!isMoving && guide.activeSelf == false){
+            if(!isDead && !isMoving && guide.activeSelf == false){
                 isMoving = true;
             }else if(isMoving){
                 playerMove();
@@ -95,7 +95,7 @@ public class playerMoving : MonoBehaviour
                 rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             }
         }else if(scene.name=="ch3_game"){
-            if(isMoving && guide.activeSelf==false){
+            if(!isDead && isMoving && guide.activeSelf==false){
                 h = Input.GetAxisRaw("Horizontal");
                 rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             }
@@ -124,7 +124,7 @@ public class playerMoving : MonoBehaviour
     }
     void playerMove()
     {
-        if(scene.name=="ch3_game" || scene.name=="ch3_dialogue"){
+        if((scene.name=="ch3_game" && !isDead) || scene.name=="ch3_dialogue"){
             if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping")){
                 rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
                 anim.SetBool("IsJumping", false);
@@ -216,6 +216,7 @@ public class playerMoving : MonoBehaviour
     {   
         //player die
         isMoving = false;
+        isDead = true;
         spriteRenderer.color = new Color(1,1,1,0.4f);
         spriteRenderer.flipY = true;
         GetComponent<BoxCollider2D>().enabled = false;

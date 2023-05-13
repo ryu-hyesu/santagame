@@ -19,10 +19,11 @@ public class soupTrigger : MonoBehaviour
     void Start()
     {
         playerInRange = false;
+        StartCoroutine(gotoone());
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(playerInRange && !isPlaying){
             if(Input.GetKeyDown(KeyCode.X)){
@@ -30,11 +31,11 @@ public class soupTrigger : MonoBehaviour
                 StartCoroutine(gotoone());
             }
         }
-    }
+    }*/
 
     private IEnumerator gotoone(){
         isPlaying = true;
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(4.0f);
         if (game){
             yield return new WaitUntil(()=> game.GetComponent<soupGame>().UpdateGame());
         
