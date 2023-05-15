@@ -37,10 +37,15 @@ public class playerMoving : MonoBehaviour
     public GameObject panelobject;
     private CanvasGroup cg;
     float fadeTime = 3f;
+
+
+    // 이중 점프 막는 bool 변수
+    bool stillJumping;
     
 
     void Awake()
     {
+        stillJumping = false;
         scene = SceneManager.GetActiveScene();
         rigid = GetComponent<Rigidbody2D>();
         anim =GetComponent<Animator>();
@@ -130,7 +135,8 @@ public class playerMoving : MonoBehaviour
                 anim.SetBool("IsJumping", false);
             }
         }else{
-            if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove){
+            if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove && !stillJumping){
+                stillJumping = true;
                 rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
                 anim.SetBool("IsJumping",false);
             }
@@ -173,6 +179,7 @@ public class playerMoving : MonoBehaviour
             if(rayHit.collider != null){
                 if(rayHit.distance < 0.5f)
                     anim.SetBool("IsJumping", false);
+                    stillJumping = false;
             }
         }
     }

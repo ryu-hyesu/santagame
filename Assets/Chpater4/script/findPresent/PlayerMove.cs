@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
             rigid.velocity = new Vector2(rigid.velocity.normalized.x*0.1f, rigid.velocity.y);
         }
 
-        if(Input.GetButton("Horizontal") ){
+        if(Input.GetButton("Horizontal") && !gameVariable.isTalk){
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
         }
     }

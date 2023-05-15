@@ -51,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter4/game4.unity
     guid: f4d9cb6413fe0e1449f4a4bfdb0909bd
   - enabled: 1
-    path: Assets/Scenes/Ending/Ending.unity
+    path: Assets/Scenes/Ending/prolog.unity
     guid: 8d8bca896abbd8c479db931ee4ab430f
   - enabled: 1
     path: Assets/Scenes/Chapter3/ch3_game.unity

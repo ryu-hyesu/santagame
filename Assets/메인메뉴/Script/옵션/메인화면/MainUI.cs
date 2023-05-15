@@ -29,6 +29,7 @@ public class MainUI : MonoBehaviour
     private float end = 0f;             // Mathf.Lerp 메소드의 두번째 값.  
     private float time = 0f;            // Mathf.Lerp 메소드의 시간 값.  
     private bool isPlaying = false;
+    string ch;
     
     private void Start() {
         theSaveNLoad = FindObjectOfType<saveNload>();
@@ -40,26 +41,23 @@ public class MainUI : MonoBehaviour
         PlayerPrefs.SetString("Playerch", SceneManager.GetActiveScene().name.ToString());
         PlayerPrefs.Save();
     }
-    public void GameLoad()
-    {
-        if(!PlayerPrefs.HasKey("Playerch")) return;
-        string ch = PlayerPrefs.GetString("Playerch");
-        SceneManager.LoadScene("street");
-    }
 
-    
-    
     public void onClick(){
         switch(currentState){
             case BtnType.New:
                 Time.timeScale = 1.0f;
                 CanvasGroupOff(mainGroup);
+                ch = "prolog";
                 StartCoroutine("PlayFadeOut");
                 break;
             
             case BtnType.Continue:
                 Time.timeScale = 1.0f;
-                GameLoad();
+                if(!PlayerPrefs.HasKey("Playerch")) return;
+                ch = PlayerPrefs.GetString("Playerch");
+
+                StartCoroutine("PlayFadeOut");
+
                 break;
 
             case BtnType.Keep:
@@ -168,7 +166,7 @@ public class MainUI : MonoBehaviour
             isPlaying = false; 
 
             yield return null;
-            loading.LoadSceneHandler("book_start",0);
+            SceneManager.LoadScene(ch);
         }  
 
 }

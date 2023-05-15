@@ -1657,7 +1657,7 @@ MonoBehaviour:
   mainGroup: {fileID: 2084613897}
   optionGroup: {fileID: 384108239}
   SoundGroup: {fileID: 567102554}
-  image: {fileID: 0}
+  image: {fileID: 1022010985}
   animTime: 2
 --- !u!114 &705129599
 MonoBehaviour:
