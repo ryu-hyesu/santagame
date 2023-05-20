@@ -29,6 +29,7 @@ public class secondTrigger : MonoBehaviour
     public CinemachineVirtualCamera vCam1;
     public CinemachineVirtualCamera vCam2;
     public CinemachineVirtualCamera vCam3;
+    public Camera mainCamera;
 
     //fade out
     public GameObject panelobject;
@@ -60,11 +61,12 @@ public class secondTrigger : MonoBehaviour
         npcs[0].transform.position += new Vector3(2, -0.5f, 0);
         npcs[1].transform.position += new Vector3(2, -0.7f, 0);
     }
-    
+
     bool first = true;
     private IEnumerator gotoone1(){
         gameVariable.isTalk = true;
 
+        vCam1.Priority = 0;
         vCam2.Priority = 11;
 
         yield return new WaitForSeconds(2.0f);
@@ -92,6 +94,7 @@ public class secondTrigger : MonoBehaviour
         hook.transform.position += new Vector3(2, 0, 0);
 
         // 카메라 변경
+        vCam2.Priority = 0;
         vCam3.Priority = 12;
 
         yield return new WaitForSeconds(2.0f);

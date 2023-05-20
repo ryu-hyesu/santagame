@@ -11,7 +11,6 @@ public class getPaper : MonoBehaviour
     public GameObject item; //책장 아이템
     public GameObject player;   //아이템 습득 시 플레이어 머리 위로 떠오르게 함
     Vector3 pos;
-    public Transform point;
 
     public GameObject chapterImg;   //일러스트 활성화
     Image chImg; //일러스트 투명도
@@ -27,7 +26,7 @@ public class getPaper : MonoBehaviour
 
     void Start()
     {
-        pos = new Vector3(item.GetComponent<Transform>().position.x, point.position.y, item.GetComponent<Transform>().position.z);
+        pos = new Vector3(item.GetComponent<Transform>().position.x, Mathf.Abs(item.GetComponent<Transform>().position.y)/2, item.GetComponent<Transform>().position.z);
         chImg = chapterImg.GetComponent<Image>();
         txtImg = textBackground.GetComponent<Image>();
         fadeImg = fade.GetComponent<Image>();
