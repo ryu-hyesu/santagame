@@ -6,6 +6,7 @@ using TMPro;
 
 public class StoryManager : MonoBehaviour
 {
+    public gameManager gm;
     public TextMeshProUGUI storyText;
 
     public TextManager textManager;
@@ -33,7 +34,7 @@ public class StoryManager : MonoBehaviour
         string textData = textManager.GetStory(id, textIndex);
 
         if (textData == null)
-            return;
+            gm.moveScene("street");
 
         talktext = storyText.GetComponent<textEffect>();
         talktext.SetMsg(textData);
