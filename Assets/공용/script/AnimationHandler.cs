@@ -30,7 +30,10 @@ public class AnimationHandler : MonoBehaviour
     public void OnEnterNextScene()
     {
         // 애니메이션이 끝난 후 처리
-        SceneManager.LoadScene("ch3_game");
+        if(SceneManager.GetActiveScene().name == "SHIP")
+            SceneManager.LoadScene("ch3_game");
+        else
+            SceneManager.LoadScene("ch3_game");
     }
  
     #endregion Methods

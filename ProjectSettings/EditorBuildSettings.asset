@@ -96,13 +96,13 @@ EditorBuildSettings:
     path: "Assets/\uBA54\uC778\uBA54\uB274/sences/options.unity"
     guid: 98d2eb7e77f10e94b95f3a01062070ae
   - enabled: 1
-    path: "Assets/\uBA54\uC778\uBA54\uB274/sences/main_1.unity"
+    path: "Assets/\uBA54\uC778\uBA54\uB274/scene/main_1.unity"
     guid: 6599777e4f75bab46addec28418cb79e
   - enabled: 1
     path: Assets/Scenes/Chapter1/house/8_hallway1F.unity
     guid: ed9a6a29ac6142842b21c75826611716
   - enabled: 1
-    path: "Assets/\uBA54\uC778\uBA54\uB274/sences/loading.unity"
+    path: "Assets/\uBA54\uC778\uBA54\uB274/scene/loading.unity"
     guid: b1a4512b28f8fbc45981427fce5cc0b7
   - enabled: 1
     path: Assets/Scenes/Chapter1/house/10_hallway1F.unity
