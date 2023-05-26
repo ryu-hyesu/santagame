@@ -8,9 +8,12 @@ public class ch1_SceneManager : MonoBehaviour
 {
     public Image image;
     Scene scene;
+    bool isBlack;
 
     void Start()
     {
+        isBlack = false;
+
         if (image.color == new Color(0, 0, 0, 1))
         {
             StartCoroutine("FadeOut");
@@ -24,8 +27,11 @@ public class ch1_SceneManager : MonoBehaviour
     //ch1 계단
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "nextScene" && Input.GetKeyDown(KeyCode.X))
+        if (other.tag == "nextScene" && Input.GetKeyDown(KeyCode.X) && !isBlack)
         {
+            isBlack = true;
+            Debug.Log("x 입력");
+
             if (scene.name == "1_livingroom")
             {
                 StartCoroutine("FadeIn");

@@ -30,6 +30,7 @@ public class starting : MonoBehaviour
     public float fadeTime = 1f; // 페이드 타임 
     float accumTime = 0f;
     private Coroutine fadeCor;
+    
 
     void Start()
     {
@@ -45,8 +46,16 @@ public class starting : MonoBehaviour
             StartCoroutine(gotoone1());
         
     }
-    
+
+    public Camera mainCamera;
+    private float GetCameraSpeed()
+    {
+        // 현재 카메라의 이동 속도를 반환합니다.
+        return mainCamera.transform.position.magnitude - mainCamera.transform.position.magnitude;
+    }
     bool first = true;
+    public float maxSpeedThreshold = 0.01f;
+    
     private IEnumerator gotoone1(){
         gameVariable.isTalk = true;
         playerInRange = true;
@@ -66,7 +75,7 @@ public class starting : MonoBehaviour
         vCam1.Priority = 9;
         vCam2.Priority = 10;
 
-        yield return null;
+        yield return new WaitForSeconds(2.5f);
         
         yield return new WaitUntil(()=> ChatSystem.GetInstance().upup(inkJSON, chatTr));
 

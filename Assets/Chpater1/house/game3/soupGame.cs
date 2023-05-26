@@ -26,7 +26,7 @@ public class soupGame : MonoBehaviour
     int i;
 
     //È¿°úÀ½
-    AudioSource audioSoure;
+    AudioSource audioSource;
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class soupGame : MonoBehaviour
             StartCoroutine("FadeOut");
         }
         anim = GetComponent<Animator>();
-        audioSoure = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     IEnumerator end(){
@@ -52,13 +52,14 @@ public class soupGame : MonoBehaviour
             slider.SetActive(true);
             isStart = false;
 
-            audioSoure.Play();
+            audioSource.Play();
         }
 
         if(isEnd){
             isEnd = false;
             slider.SetActive(false);
 
+            audioSource.Stop();
             StartCoroutine("FadeIn");
 
             return true;

@@ -76,13 +76,18 @@ public class NPCSentence3 : MonoBehaviour
             }
 
             if(startTalking == 3 && !flag){
-                startFading();
+                Invoke("endTalk", 2);
                 flag = true;
             }
         }else if(scene.name =="ch3_game"){
             Debug.Log("play game");
         }
         
+    }
+
+    void endTalk(){
+        ChatSystem.GetInstance().destroy();
+        startFading();
     }
 
     void PlaySound(string action){
@@ -153,6 +158,7 @@ public class NPCSentence3 : MonoBehaviour
     public void startFading()
     {
         Debug.Log("FadeIn");
+        //ChatSystem.GetInstance().destroy();
         StartCoroutine("FadeIn");
     }
 }

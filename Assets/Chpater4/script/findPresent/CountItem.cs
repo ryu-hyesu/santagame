@@ -67,7 +67,7 @@ public class CountItem : MonoBehaviour
     bool first = true;
     private IEnumerator gotoone1(){
         gameVariable.isTalk = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         
         yield return new WaitUntil(()=> ChatSystem.GetInstance().upup(inkJSON, chatTr));
 

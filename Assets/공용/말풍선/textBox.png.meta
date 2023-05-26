@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 022ae8f49c82f4443bdce2de3b5f425b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6639126460929552292
+    second: textBox_0
+  - first:
+      213: -5966228332229152769
+    second: textBox_1
+  - first:
+      213: 3883319341482572148
+    second: textBox_2
+  - first:
+      213: 1560982048243133239
+    second: textBox_3
+  - first:
+      213: -5067282489327732366
+    second: textBox_4
+  - first:
+      213: -3487924258075329471
+    second: textBox_5
+  - first:
+      213: 4800007762997414585
+    second: textBox_6
+  - first:
+      213: -1002554483593425700
+    second: textBox_7
+  - first:
+      213: -4717603074268331834
+    second: textBox_8
+  - first:
+      213: 5281570001603645359
+    second: textBox_9
+  - first:
+      213: -6429993988393634585
+    second: textBox_10
+  - first:
+      213: 430831423342097948
+    second: textBox_11
+  - first:
+      213: -5718106432275085522
+    second: textBox_12
+  - first:
+      213: 1424048054663168225
+    second: textBox_13
+  - first:
+      213: 9222542474101816174
+    second: textBox_14
+  - first:
+      213: 5402535733080334100
+    second: textBox_15
+  - first:
+      213: -8618927078299082361
+    second: textBox_16
+  - first:
+      213: 8249253313304754854
+    second: textBox_17
+  - first:
+      213: 5632706978521751472
+    second: textBox_18
+  - first:
+      213: -2933101816535666682
+    second: textBox_19
+  - first:
+      213: -133044273622072705
+    second: textBox_20
+  - first:
+      213: -1241632744506131920
+    second: textBox_21
+  - first:
+      213: -5951635458683987232
+    second: textBox_22
+  - first:
+      213: 8605367205260025969
+    second: textBox_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: textBox_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2294
+        width: 912
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af2a92375ae22c50800000000000000
+      internalID: 6639126460929552292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_1
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 2294
+        width: 914
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff2c9831f2b33da0800000000000000
+      internalID: -5966228332229152769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_2
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2294
+        width: 914
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479f87acd5254e530800000000000000
+      internalID: 3883319341482572148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_3
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 2294
+        width: 919
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b2b4607e8b9a510800000000000000
+      internalID: 1560982048243133239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_4
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 2296
+        width: 921
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279301f6c656da9b0800000000000000
+      internalID: -5067282489327732366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1724
+        width: 921
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cb3f9fd57689fc0800000000000000
+      internalID: -3487924258075329471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_6
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1724
+        width: 924
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba049001ad0d9240800000000000000
+      internalID: 4800007762997414585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_7
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1724
+        width: 928
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc407942063612f0800000000000000
+      internalID: -1002554483593425700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_8
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 1724
+        width: 928
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c002f6bff4b78eb0800000000000000
+      internalID: -4717603074268331834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_9
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 1724
+        width: 926
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafc1f9fee7eb4940800000000000000
+      internalID: 5281570001603645359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1152
+        width: 928
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e476edf88214c6a0800000000000000
+      internalID: -6429993988393634585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_11
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1152
+        width: 929
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b16a95ee9af500800000000000000
+      internalID: 430831423342097948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_12
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1150
+        width: 931
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e270e54ee7435a0b0800000000000000
+      internalID: -5718106432275085522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_13
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 1150
+        width: 931
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0c849292c33c310800000000000000
+      internalID: 1424048054663168225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_14
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 1147
+        width: 930
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7ace548d0dff70800000000000000
+      internalID: 9222542474101816174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 576
+        width: 930
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f9b9810a9a9fa40800000000000000
+      internalID: 5402535733080334100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_16
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 576
+        width: 931
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781ecf0cc7b636880800000000000000
+      internalID: -8618927078299082361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_17
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 578
+        width: 929
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa7eb99e2c3b7270800000000000000
+      internalID: 8249253313304754854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_18
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 578
+        width: 925
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf17a257256b2e40800000000000000
+      internalID: 5632706978521751472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_19
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 580
+        width: 923
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600b65720778b47d0800000000000000
+      internalID: -2933101816535666682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 11
+        width: 921
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f724b5320f4572ef0800000000000000
+      internalID: -133044273622072705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_21
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 13
+        width: 919
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03af73ae895d4cee0800000000000000
+      internalID: -1241632744506131920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_22
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 13
+        width: 914
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea958c551b876da0800000000000000
+      internalID: -5951635458683987232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textBox_23
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 13
+        width: 913
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170e15741e76c6770800000000000000
+      internalID: 8605367205260025969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

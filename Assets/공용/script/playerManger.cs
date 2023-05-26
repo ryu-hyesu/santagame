@@ -22,10 +22,11 @@ public class playerManger : MonoBehaviour
 
     
    // GameObject scanObject;
-
+    bool stillJumping;
     // Start is called before the first frame update
     void Awake()
     {
+        stillJumping = false;
         rigid = GetComponent<Rigidbody2D>();
         anim =GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,9 +34,10 @@ public class playerManger : MonoBehaviour
 
     void speicalMove(){
         
-        if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove){
+        if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove && !stillJumping){
             rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
             anim.SetBool("IsJumping",false);
+            stillJumping = true;
         }
 
         if(Input.GetButtonUp("Horizontal")){
@@ -74,8 +76,10 @@ public class playerManger : MonoBehaviour
             RaycastHit2D rayHit = Physics2D.CircleCast(transform.position, 2.0f, Vector3.down, 0f,LayerMask.GetMask(new string[] {"floor","npc"}));
 
             if(rayHit.collider != null){
-                if(rayHit.distance <0.5f)
+                if(rayHit.distance <0.5f){
+                    stillJumping = false;
                     anim.SetBool("IsJumping",false);
+                }
             }
         
         }

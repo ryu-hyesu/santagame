@@ -37,10 +37,15 @@ public class playerMoving : MonoBehaviour
     public GameObject panelobject;
     private CanvasGroup cg;
     float fadeTime = 3f;
+
+
+    // 이중 점프 막는 bool 변수
+    bool stillJumping;
     
 
     void Awake()
     {
+        stillJumping = false;
         scene = SceneManager.GetActiveScene();
         rigid = GetComponent<Rigidbody2D>();
         anim =GetComponent<Animator>();
@@ -74,7 +79,7 @@ public class playerMoving : MonoBehaviour
                 anim.SetBool("IsJumping", false);
             }
         }else if(scene.name == "ch3_game"){
-            if(!isMoving && guide.activeSelf == false){
+            if(!isDead && !isMoving && guide.activeSelf == false){
                 isMoving = true;
             }else if(isMoving){
                 playerMove();
@@ -95,7 +100,7 @@ public class playerMoving : MonoBehaviour
                 rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             }
         }else if(scene.name=="ch3_game"){
-            if(isMoving && guide.activeSelf==false){
+            if(!isDead && isMoving && guide.activeSelf==false){
                 h = Input.GetAxisRaw("Horizontal");
                 rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
             }
@@ -124,13 +129,14 @@ public class playerMoving : MonoBehaviour
     }
     void playerMove()
     {
-        if(scene.name=="ch3_game" || scene.name=="ch3_dialogue"){
+        if((scene.name=="ch3_game" && !isDead) || scene.name=="ch3_dialogue"){
             if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping")){
                 rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
                 anim.SetBool("IsJumping", false);
             }
         }else{
-            if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove){
+            if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove && !stillJumping){
+                stillJumping = true;
                 rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
                 anim.SetBool("IsJumping",false);
             }
@@ -173,6 +179,7 @@ public class playerMoving : MonoBehaviour
             if(rayHit.collider != null){
                 if(rayHit.distance < 0.5f)
                     anim.SetBool("IsJumping", false);
+                    stillJumping = false;
             }
         }
     }
@@ -216,6 +223,7 @@ public class playerMoving : MonoBehaviour
     {   
         //player die
         isMoving = false;
+        isDead = true;
         spriteRenderer.color = new Color(1,1,1,0.4f);
         spriteRenderer.flipY = true;
         GetComponent<BoxCollider2D>().enabled = false;
