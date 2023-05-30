@@ -53,6 +53,9 @@ public class ChatSystem2 : MonoBehaviour
     public bool madeChoices = true;
     bool isShow = false;
 
+    //종이
+    public GameObject paper;
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue");
@@ -256,10 +259,18 @@ public class ChatSystem2 : MonoBehaviour
         //Destroy(quad);
 
         //대화->게임 장면 전환
-        if (gameSceneNum == 1 || gameSceneNum == 2)
+        if (gameSceneNum == 1)
         {
             StartCoroutine("FadeIn");
         }
+        if (gameSceneNum == 2)
+        {
+            //StartCoroutine("FadeIn");
+            Debug.Log("종이 나와라");
+            npcSentence.did = true;
+            paper.gameObject.SetActive(true);   //Chapter1(House2_2) -> 동화 종이 등장 -> Chapter2 시작 씬
+        }
+
     }
 
     private void DisplayChoices()
@@ -357,8 +368,11 @@ public class ChatSystem2 : MonoBehaviour
         }
         if (gameSceneNum == 1)
             SceneManager.LoadScene("12_game2");    //11_kitchen 리자 대화 후 -> soup game
-        if (gameSceneNum == 2)
-            SceneManager.LoadScene("New Scene");     //Chapter1(House2_2) -> Chapter2 시작 씬
+        /*if (gameSceneNum == 2)
+        {
+            paper.gameObject.SetActive(true);
+            //SceneManager.LoadScene("New Scene");     //Chapter1(House2_2) -> 동화 종이 등장 -> Chapter2 시작 씬
+        }*/
     }
 
     IEnumerator FadeOut()
