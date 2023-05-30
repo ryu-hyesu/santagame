@@ -32,6 +32,8 @@ public class AnimationHandler : MonoBehaviour
         // 애니메이션이 끝난 후 처리
         if(SceneManager.GetActiveScene().name == "SHIP")
             SceneManager.LoadScene("ch3_game");
+        else if (SceneManager.GetActiveScene().name == "16_children")   //ch1 -> ch2
+            SceneManager.LoadScene("New Scene");
         else
             SceneManager.LoadScene("ch3_game");
     }
