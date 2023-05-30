@@ -265,8 +265,6 @@ public class ChatSystem2 : MonoBehaviour
         }
         if (gameSceneNum == 2)
         {
-            //StartCoroutine("FadeIn");
-            Debug.Log("종이 나와라");
             npcSentence.did = true;
             paper.gameObject.SetActive(true);   //Chapter1(House2_2) -> 동화 종이 등장 -> Chapter2 시작 씬
         }
