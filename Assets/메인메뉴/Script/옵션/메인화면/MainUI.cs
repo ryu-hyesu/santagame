@@ -135,7 +135,7 @@ public class MainUI : MonoBehaviour
 
             yield return null; 
             
-            loading.LoadSceneHandler("book_start",0);
+            loading.LoadSceneHandler("prolog",0);
         }  
 
     IEnumerator PlayFadeOut()  

@@ -114,7 +114,7 @@ public class ChooseBook : MonoBehaviour
         }  
 
         yield return null;
-        SceneManager.LoadScene("prolog");
+        SceneManager.LoadScene("street");
     }
 
     IEnumerator FadeIn()

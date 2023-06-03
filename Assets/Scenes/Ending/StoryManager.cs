@@ -33,7 +33,7 @@ public class StoryManager : MonoBehaviour
         string textData = textManager.GetStory(id, textIndex);
 
         if (textData == null)
-            gm.moveScene("street");
+            gm.moveScene("Book_start");
 
         talktext = storyText.GetComponent<textEffect>();
         talktext.SetMsg(textData);
