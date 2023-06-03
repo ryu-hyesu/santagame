@@ -28,27 +28,26 @@ public class gotoOption : MonoBehaviour
 
     public void GameSave()
     {
-        Debug.Log("dsfds");
-        //player.x, player.y;
-        //PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
-        //PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
-        PlayerPrefs.SetString("Playerch", SceneManager.GetActiveScene().ToString());
+        
+        string senceName = SceneManager.GetActiveScene().ToString();
+        Debug.Log("저장할 씬 네임" + senceName);
+
+        PlayerPrefs.SetString("Playerch", senceName);
         PlayerPrefs.Save();
     }
     public void GameLoad()
     {
         if(PlayerPrefs.HasKey("Playerch")) return;
 
-        //float x = PlayerPrefs.GetFloat("PlayerX");
-        //float y = PlayerPrefs.GetFloat("PlayerY");
         string ch = PlayerPrefs.GetString("Playerch");
+
+        Debug.Log(ch);
         
         if(SceneManager.GetActiveScene().Equals(ch))
             SceneManager.LoadScene(ch);
-        //player.transform.position = new Vector3(x,y,0);
     }
     public void onClick(){
-        
+        Debug.Log("클릭!");
         switch(currentState){
             case BtnType.Continue:
             // 플레이어의 위치
@@ -60,7 +59,7 @@ public class gotoOption : MonoBehaviour
             case BtnType.Save:
             // 플레이어의 위치
             // sence 번호
-                Debug.Log("fff");
+                Debug.Log("save");
                 GameSave();
                 Debug.Log("fff2");
                 break;

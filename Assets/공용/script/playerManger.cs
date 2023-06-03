@@ -36,7 +36,7 @@ public class playerManger : MonoBehaviour
         
         if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove && !stillJumping){
             rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
-            anim.SetBool("IsJumping",false);
+            anim.SetBool("IsJumping",true);
             stillJumping = true;
         }
 

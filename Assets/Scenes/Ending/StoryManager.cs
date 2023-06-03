@@ -20,12 +20,19 @@ public class StoryManager : MonoBehaviour
         //storyText.text = "";
     }
 
+    bool isStart = false;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        if(!isStart){
             Story();
+            isStart = true;
         }
+        else
+            if (Input.GetKeyDown(KeyCode.Space))
+                Story();
+        
+        
     }
 
     void Text(int id)

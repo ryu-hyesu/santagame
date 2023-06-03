@@ -56,6 +56,8 @@ public class MainUI : MonoBehaviour
                 if(!PlayerPrefs.HasKey("Playerch")) return;
                 ch = PlayerPrefs.GetString("Playerch");
 
+                Debug.Log(ch);
+
                 StartCoroutine("PlayFadeOut");
 
                 break;
@@ -64,6 +66,11 @@ public class MainUI : MonoBehaviour
                 break;
 
             case BtnType.Save:
+                string senceName = SceneManager.GetActiveScene().ToString();
+                Debug.Log("저장할 씬 네임" + senceName);
+
+                PlayerPrefs.SetString("Playerch", senceName);
+                PlayerPrefs.Save();
                 break;
 
             case BtnType.Option:
