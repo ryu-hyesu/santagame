@@ -24,8 +24,14 @@ public class NumberSystem : MonoBehaviour {
     private bool keyInput; // 키처리 활성화, 비활성화.
     private bool correctFlag; // 정답인지 아닌지 여부
 
+    AudioSource audioSoure; //좌물쇠 효과음
+
     // Use this for initialization
 
+    void Start()
+    {
+        audioSoure = GetComponent<AudioSource>();
+    }
 
     public void ShowNumber(int _correctNumber)
     {
@@ -158,6 +164,7 @@ public class NumberSystem : MonoBehaviour {
         if(result == correctNumber)
         {
             correctFlag = true;
+            audioSoure.Play();
         }
         else
         {

@@ -5576,28 +5576,30 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- \uC800\uC791\uAD8C -\n\n\n\n\uD3F0\uD2B8 \uC800\uC791\uAD8C\uC790 \uC720\uD1A0\uC774\uBBF8\uC9C0
-    (UTOIMAGE.COM)\n\n\n\nThe following music was used for this media project:\r\nMusic:
+  m_Text: "- \uC800\uC791\uAD8C -\n\n\n\uD3F0\uD2B8 \uC800\uC791\uAD8C\uC790 \uC720\uD1A0\uC774\uBBF8\uC9C0
+    (UTOIMAGE.COM)\n\n\nThe following music was used for this media project:\r\nMusic:
     Happy Christmas Inspiring by WinnieTheMoog\r\nFree download: https://filmmusic.io/song/7179-happy-christmas-inspiring\r\nLicense
-    (CC BY 4.0): https://filmmusic.io/standard-license\r\nArtist website: https://linktr.ee/taigasoundprod\r\n\r\n\n\nThe
+    (CC BY 4.0): https://filmmusic.io/standard-license\r\nArtist website: https://linktr.ee/taigasoundprod\r\n\r\n\nThe
     following music was used for this media project:\r\nMusic: Horde Of Geese by
     Alexander Nakarada\r\nFree download: https://filmmusic.io/song/9835-horde-of-geese\r\nLicense
-    (CC BY 4.0): https://filmmusic.io/standard-license\r\nArtist website: https://www.serpentsoundstudios.com/\r\n\r\n\n\nThe
-    following music was used for this media project:\r\nMusic: Eternal Story  by
-    Rafael Krux\r\nFree download: https://filmmusic.io/song/5432-eternal-story\r\nLicense
-    (CC BY 4.0): https://filmmusic.io/standard-license\r\nArtist website: https://www.orchestralis.net/\r\n\n\n\n<a
-    href=\"https://www.flaticon.com/kr/free-icons/\" title=\"\uB8E8\uB3CC\uD504 \uC544\uC774\uCF58\"
-    style=\"color:#ffffff\">\uB8E8\uB3CC\uD504 \uC544\uC774\uCF58  \uC81C\uC791\uC790:
-    Jesus Chavarria - Flaticon</a>\n\n\n\n+ special Thanks to\t\t\t\t\uD50C\uB808\uC774
-    \uD574\uC8FC\uC2E0 \uBAA8\uB4E0 \uBD84\uB4E4\n\n\nCopyright \xA9 2023 All rights
-    Reserved."
+    (CC BY 4.0): https://filmmusic.io/standard-license\r\nArtist website: https://www.serpentsoundstudios.com/\r\n\r\n\nThe
+    following music was used for this media project:\r\nMusic: Bumbling In The Dark
+    by Steven OBrien\r\nFree download: https://filmmusic.io/song/10011-bumbling-in-the-dark\r\nLicense
+    (CC BY 4.0): https://filmmusic.io/standard-license\r\n\n\nThe following music
+    was used for this media project:\r\nMusic: Christmas Theme 2 by Alexander Nakarada\r\nFree
+    download: https://filmmusic.io/song/4775-christmas-theme-2\r\nLicense (CC BY
+    4.0): https://filmmusic.io/standard-license\n\n\n<a href=\"https://www.flaticon.com/kr/free-icons/\"
+    title=\"\uB8E8\uB3CC\uD504 \uC544\uC774\uCF58\" style=\"color:#ffffff\">\uB8E8\uB3CC\uD504
+    \uC544\uC774\uCF58  \uC81C\uC791\uC790: Jesus Chavarria - Flaticon</a>\n\n\n\n+
+    special Thanks to\t\t\t\t\uD50C\uB808\uC774 \uD574\uC8FC\uC2E0 \uBAA8\uB4E0 \uBD84\uB4E4\n\n\nCopyright
+    \xA9 2023 All rights Reserved."
 --- !u!222 &1541357497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5877,7 +5879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2586.12}
+  m_AnchoredPosition: {x: 0, y: -2621}
   m_SizeDelta: {x: 960, y: 4632.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092849918
