@@ -84,6 +84,7 @@ public class playerMoving : MonoBehaviour
             }else if(isMoving){
                 playerMove();
                 animationMove();
+                Debug.Log("isJumping "+anim.GetBool("IsJumping"));
             }
         }else{
             playerMove();
@@ -127,12 +128,13 @@ public class playerMoving : MonoBehaviour
         playerSpeed();
         checkingFloor();
     }
+    //jump
     void playerMove()
     {
         if((scene.name=="ch3_game" && !isDead) || scene.name=="ch3_dialogue"){
             if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping")){
                 rigid.AddForce(Vector2.up*jumpPower, ForceMode2D.Impulse);
-                anim.SetBool("IsJumping", false);
+                anim.SetBool("IsJumping", true);
             }
         }else{
             if(Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove && !stillJumping){
@@ -166,7 +168,6 @@ public class playerMoving : MonoBehaviour
             rigid.velocity = new Vector2(Speed * (-1), rigid.velocity.y);
     }
 
-
     void checkingFloor(){
         if(rigid.velocity.y > 0){
             Physics2D.IgnoreLayerCollision(playerLayer, floorLayer, true);
@@ -177,7 +178,7 @@ public class playerMoving : MonoBehaviour
             //RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 2, LayerMask.GetMask("floor"));
             RaycastHit2D rayHit = Physics2D.CircleCast(transform.position, 2.0f, Vector3.down, 0f,LayerMask.GetMask(new string[] {"floor"}));
             if(rayHit.collider != null){
-                if(rayHit.distance < 0.5f)
+                if(rayHit.distance < 0.1f)
                     anim.SetBool("IsJumping", false);
                     stillJumping = false;
             }

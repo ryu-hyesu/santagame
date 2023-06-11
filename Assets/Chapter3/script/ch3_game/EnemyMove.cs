@@ -33,7 +33,7 @@ public class EnemyMove : MonoBehaviour
     //1초에 50~60회 돈다
     void FixedUpdate()
     {
-        Debug.Log("die"+die);
+        //Debug.Log("die"+die);
         
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
 
