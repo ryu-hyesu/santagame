@@ -47,7 +47,7 @@ public class MainUI : MonoBehaviour
             case BtnType.New:
                 Time.timeScale = 1.0f;
                 CanvasGroupOff(mainGroup);
-                ch = "Book_start";
+                ch = "prolog";
                 StartCoroutine("PlayFadeOut");
                 break;
             
