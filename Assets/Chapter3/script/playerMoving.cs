@@ -23,6 +23,7 @@ public class playerMoving : MonoBehaviour
     public bool isMoving = false;
     //bool finished;  //책장 넘어가는 애니메이션 실행하는 주석이었던 것 같음
     bool isDead = false;    //주인공 죽으면 isMoving=false 필요
+    AudioSource audioSource;
 
     //street 에 있던 주석
    // public textmanger manger;
@@ -38,7 +39,6 @@ public class playerMoving : MonoBehaviour
     private CanvasGroup cg;
     float fadeTime = 3f;
 
-
     // 이중 점프 막는 bool 변수
     bool stillJumping;
     
@@ -50,7 +50,7 @@ public class playerMoving : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim =GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -84,7 +84,7 @@ public class playerMoving : MonoBehaviour
             }else if(isMoving){
                 playerMove();
                 animationMove();
-                Debug.Log("isJumping "+anim.GetBool("IsJumping"));
+                //Debug.Log("isJumping "+anim.GetBool("IsJumping"));
             }
         }else{
             playerMove();
@@ -187,16 +187,9 @@ public class playerMoving : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log(finished);
         if(other.tag == "Finish"){
-            //if(scene.name == "ch3_dialogue" && npcSentence.did)
-                //Debug.Log("finish");
-           // else 
             if(scene.name == "ch3_game")
                 fadeScript.Fading();
-                //SceneManager.LoadScene("ch3_dialogue");
-            //else
-            //    finished = true;
         }
         if(other.tag == "Dead"){
             SceneManager.LoadScene("ch3_game");
@@ -209,9 +202,6 @@ public class playerMoving : MonoBehaviour
             if(rigid.velocity.y < 0 && transform.position.y > collision.transform.position.y){
                 OnAttack(collision.transform);
             }
-            else{
-                OnDie();
-            }
         }
     }
     void OnAttack(Transform enemy)
@@ -223,6 +213,7 @@ public class playerMoving : MonoBehaviour
     public void OnDie()
     {   
         //player die
+        audioSource.Play();
         isMoving = false;
         isDead = true;
         spriteRenderer.color = new Color(1,1,1,0.4f);

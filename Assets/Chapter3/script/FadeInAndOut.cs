@@ -17,7 +17,7 @@ public class FadeInAndOut : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
 
-        if(scene.name == "ch3_dialogue")
+        if(scene.name == "ch3_dialogue" || scene.name=="ch3_game")
             Fading2();
     }
 
@@ -56,7 +56,6 @@ public class FadeInAndOut : MonoBehaviour
         }
         if(f <= 0){
             yield return new WaitForSeconds(0.05f);
-            black.SetActive(false);
             playerMoving.FadingCG();
         }
     }

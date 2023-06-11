@@ -16,6 +16,8 @@ public class EnemyMove : MonoBehaviour
     public AudioClip audioAttack;
     AudioSource audioSource;
 
+    public playerMoving pm;
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -88,5 +90,12 @@ public class EnemyMove : MonoBehaviour
     void DeActive()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player"){
+            pm.OnDie();
+        }
     }
 }
