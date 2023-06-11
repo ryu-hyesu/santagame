@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class getPaper : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class getPaper : MonoBehaviour
     Image fadeImg;  //fade
     public GameObject bookStartImg;
     public GameObject book; //책장 넘어가는 애니메이션
+
+    public AnimationHandler ah;
 
     Color c;
 
@@ -54,7 +57,6 @@ public class getPaper : MonoBehaviour
             getItem = false;
             chapterImg.SetActive(true);
             StartCoroutine(FadeIn(chImg, 1));
-            //StartCoroutine(FadeTextToFullAlpha());
         }
     }
 
@@ -113,8 +115,14 @@ public class getPaper : MonoBehaviour
                 step += 1;
                 bookStartImg.SetActive(true);
                 StartCoroutine("FadeOut");
-            }
-            
+            } else if(step==3){
+                if(SceneManager.GetActiveScene().name == "SHIP")
+                    SceneManager.LoadScene("ch3_game");
+                else if (SceneManager.GetActiveScene().name == "16_children")   //ch1 -> ch2
+                    SceneManager.LoadScene("New Scene");
+                else
+                    SceneManager.LoadScene("ch3_game");
+            }       
         }
     }
     

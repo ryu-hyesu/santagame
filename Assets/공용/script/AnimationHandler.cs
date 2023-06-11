@@ -21,6 +21,8 @@ public class AnimationHandler : MonoBehaviour
     public GameObject fade;
     Image fadeImg;
 
+    public bool did = false;
+
     void Awake()
     {
         m_Animator = GetComponent<Animator>();
@@ -41,14 +43,7 @@ public class AnimationHandler : MonoBehaviour
         if(fade.activeSelf==false)
             fade.SetActive(true);
          StartCoroutine(gp.FadeIn(fadeImg, 1));
-        /*
-        if(SceneManager.GetActiveScene().name == "SHIP")
-            SceneManager.LoadScene("ch3_game");
-        else if (SceneManager.GetActiveScene().name == "16_children")   //ch1 -> ch2
-            SceneManager.LoadScene("New Scene");
-        else
-            SceneManager.LoadScene("ch3_game");
-        */
+        //씬이동 - getPaper에서 처리
     }
 
 

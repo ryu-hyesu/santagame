@@ -540,6 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gp: {fileID: 7049183896723830563}
   fade: {fileID: 7049183895737454960}
+  did: 0
 --- !u!1 &7049183895737454960
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +919,7 @@ MonoBehaviour:
   fade: {fileID: 7049183895737454960}
   bookStartImg: {fileID: 7049183895194792015}
   book: {fileID: 7049183895692699712}
+  ah: {fileID: 341769018759702541}
 --- !u!1 &7049183897098673067
 GameObject:
   m_ObjectHideFlags: 0
