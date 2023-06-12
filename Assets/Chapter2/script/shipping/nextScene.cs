@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class nextScene : MonoBehaviour
 {
@@ -18,9 +19,18 @@ public class nextScene : MonoBehaviour
     [SerializeField]
     GameObject FinshNPC2;
     bool isTrigger;
+
+    public Image image; //시작 시 fade out
+
     void Start()
     {
         cg = panelobject.GetComponent<CanvasGroup>();
+
+        //시작 시 fade out
+        if (image.color == new Color(0, 0, 0, 1))
+        {
+            StartCoroutine("FadeOut");
+        }
     }
 
     // Update is called once per frame
@@ -78,6 +88,16 @@ public class nextScene : MonoBehaviour
     void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
             playerInRange = false;
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        float f;
+        for (f = 1f; f >= 0f; f -= 0.05f)
+        {
+            yield return new WaitForSeconds(0.05f);
+            image.color = new Color(0, 0, 0, f);
         }
     }
 }

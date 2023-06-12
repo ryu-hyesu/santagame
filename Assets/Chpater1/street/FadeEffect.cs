@@ -8,6 +8,7 @@ public class FadeEffect : MonoBehaviour
 {
     public Image image;
     public bool isDone;
+    public static FadeEffect instance;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,11 @@ public class FadeEffect : MonoBehaviour
         Debug.Log(gameVariable.isTalk);
         Debug.Log(gameVariable.noMove);
         Debug.Log(Time.timeScale);
+
+        if (image.color == new Color(0, 0, 0, 1))
+        {
+            StartCoroutine("FadeOut");
+        }
     }
 
     // Update is called once per frame
@@ -36,7 +42,7 @@ public class FadeEffect : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             image.color = new Color(0, 0, 0, f);
         }
-        SceneManager.LoadScene("House1_0");    //���� �������
+        SceneManager.LoadScene("1_livingroom");
     }
 
     IEnumerator FadeOut()

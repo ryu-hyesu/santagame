@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class puzzleGame : MonoBehaviour
 {
@@ -13,6 +14,17 @@ public class puzzleGame : MonoBehaviour
     public bool finishGame=false;
     bool startGame= false;
 
+    public Image fadeImage; //fade in,out
+
+    void Start()
+    {
+
+        //Ω√¿€ Ω√ fade out
+        if (fadeImage.color == new Color(0, 0, 0, 1))
+        {
+            StartCoroutine("FadeOut");
+        }
+    }
 
     private void Update() 
     {
@@ -54,7 +66,25 @@ public class puzzleGame : MonoBehaviour
     {
         SceneManager.LoadScene("SHIP");
     }
+
+    /*IEnumerator FadeIn()
+    {
+        float f;
+        for (f = 0f; f <= 1; f += 0.05f)
+        {
+            yield return new WaitForSeconds(0.05f);
+            fadeImage.color = new Color(0, 0, 0, f);
+        }
+        SceneManager.LoadScene("SHIP");
+    }*/
+
+    IEnumerator FadeOut()
+    {
+        float f;
+        for (f = 1f; f >= 0f; f -= 0.05f)
+        {
+            yield return new WaitForSeconds(0.05f);
+            fadeImage.color = new Color(0, 0, 0, f);
+        }
+    }
 }
-
-
-    

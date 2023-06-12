@@ -10,7 +10,7 @@ public class GameGuide : MonoBehaviour
 
     void Start()
     {
-        Invoke("OffImg", 2);
+        Invoke("OffImg", 3);
     }
 
     public void OffImg()

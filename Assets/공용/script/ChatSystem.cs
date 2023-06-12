@@ -223,8 +223,9 @@ public class ChatSystem : MonoBehaviour
                 if (changeScene == "darling")
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        Debug.Log("장면이동");
-                        SceneManager.LoadScene("1_livingroom");
+                        //Debug.Log("장면이동");
+                        isSceneChanged = true;
+                        //SceneManager.LoadScene("1_livingroom");
                     }
             }
             StartCoroutine("EndDialogue");
