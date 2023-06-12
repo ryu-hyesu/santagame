@@ -15,7 +15,8 @@ public class cro : MonoBehaviour
     public GameObject slider;
     public GameObject img;
     public GameObject corcAttack;
-    
+
+    public Image fadeImage; //성공 시 fade in
 
     void Start()
     {
@@ -35,7 +36,9 @@ public class cro : MonoBehaviour
                 //curHp = 0;
                 Destroy(croc);
                 Destroy(slider);
-                SceneManager.LoadScene("SHIP");
+
+                StartCoroutine("FadeIn");
+                //SceneManager.LoadScene("SHIP");
                 Debug.Log("끝");
             }
         }
@@ -46,5 +49,16 @@ public class cro : MonoBehaviour
     private void HandleHp()
     {
         hpbar.value = Mathf.Lerp(hpbar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
+    }
+
+    IEnumerator FadeIn()
+    {
+        float f;
+        for (f = 0f; f <= 1; f += 0.05f)
+        {
+            yield return new WaitForSeconds(0.05f);
+            fadeImage.color = new Color(0, 0, 0, f);
+        }
+        SceneManager.LoadScene("SHIP");
     }
 }

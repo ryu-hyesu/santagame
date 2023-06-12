@@ -1733,7 +1733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &735173603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1812,7 +1812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016817492833126381, guid: 8460bdc088cf678408ec58485becd5f1, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6016817492833126381, guid: 8460bdc088cf678408ec58485becd5f1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3111,6 +3111,7 @@ MonoBehaviour:
   gameSceneNum: 0
   activateChoices: 0
   madeChoices: 1
+  paper: {fileID: 0}
 --- !u!4 &1226322164
 Transform:
   m_ObjectHideFlags: 0
