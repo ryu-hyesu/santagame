@@ -25,6 +25,8 @@ public class NumberSystem : MonoBehaviour {
     private bool correctFlag; // 정답인지 아닌지 여부
 
     AudioSource audioSoure; //좌물쇠 효과음
+    public AudioClip successSfx;
+    public AudioClip failSfx;
 
     // Use this for initialization
 
@@ -164,11 +166,14 @@ public class NumberSystem : MonoBehaviour {
         if(result == correctNumber)
         {
             correctFlag = true;
+            audioSoure.clip = successSfx;
             audioSoure.Play();
         }
         else
         {
             correctFlag = false;
+            audioSoure.clip = failSfx;
+            audioSoure.Play();
         }
         Debug.Log("우리가 낸 답 = " + result + "  정답 = " + correctNumber);
         StartCoroutine(ExitCoroutine());
