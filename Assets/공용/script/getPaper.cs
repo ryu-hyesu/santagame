@@ -116,12 +116,12 @@ public class getPaper : MonoBehaviour
                 bookStartImg.SetActive(true);
                 StartCoroutine("FadeOut");
             } else if(step==3){
-                if(SceneManager.GetActiveScene().name == "SHIP")
+                if(SceneManager.GetActiveScene().name == "SHIP")    //ch2 -> ch3
                     SceneManager.LoadScene("ch3_game");
                 else if (SceneManager.GetActiveScene().name == "16_children")   //ch1 -> ch2
                     SceneManager.LoadScene("New Scene");
-                else
-                    SceneManager.LoadScene("ch3_game");
+                else if (SceneManager.GetActiveScene().name == "EndShip")   //ch4 -> ending
+                    SceneManager.LoadScene("Ending");
             }       
         }
     }
