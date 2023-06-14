@@ -22,12 +22,20 @@ public class crocAttack : MonoBehaviour
     float accumTime = 0f;
     public bool restart = false;
 
+    public Image fadeImage; //시작 시 fade out
+
     // Start is called before the first frame update
     void Start()
     {
         start = false;
         audio = GetComponent<AudioSource>();
         cg = overView.GetComponent<CanvasGroup>();
+
+        //시작 시 fade out
+        if (fadeImage.color == new Color(0, 0, 0, 1))
+        {
+            StartCoroutine("FadeOut");
+        }
     }
 
 
@@ -76,5 +84,14 @@ public class crocAttack : MonoBehaviour
 
         SceneManager.LoadScene("croc");
     }
-    
+
+    IEnumerator FadeOut()
+    {
+        float f;
+        for (f = 1f; f >= 0f; f -= 0.05f)
+        {
+            yield return new WaitForSeconds(0.05f);
+            fadeImage.color = new Color(0, 0, 0, f);
+        }
+    }
 }

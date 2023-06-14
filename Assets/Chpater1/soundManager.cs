@@ -15,13 +15,24 @@ public class soundManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
         audioSource = GetComponent<AudioSource>();
-        Debug.Log(scene.name);
+        //Debug.Log(scene.name);
 
         if (scene.name == "5_game1" || scene.name == "12_game2" || scene.name == "New Scene")
         {
             //Debug.Log("À½¾Çx");
             //audioSource.Pause();
             Destroy(soundManager.instance.gameObject);
+        }
+        else if (scene.name == "street")
+        {
+            if (instance == null)
+                instance = this;
+            else if (instance != this)
+            {
+                Destroy(soundManager.instance.gameObject);
+                instance = this;
+            }
+            DontDestroyOnLoad(gameObject);
         }
 
         else
