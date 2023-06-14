@@ -235,7 +235,8 @@ public class playerMoving : MonoBehaviour
     }
 
     public void FadingCG(){
-        StartCoroutine("FadeIn");
+        if(cg != null)
+            StartCoroutine("FadeIn");
     }
 
     private IEnumerator FadeIn(){
