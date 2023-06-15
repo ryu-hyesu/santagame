@@ -63,6 +63,25 @@ public class playerMove : MonoBehaviour
         }
     }
 
+    void speicalMove2()
+    {
+        if (Input.GetButtonDown("Jump") && !anim.GetBool("IsJumping") && !gameVariable.isTalk && !gameVariable.noMove)
+        {
+            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            anim.SetBool("IsJumping", false);
+        }
+
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.1f, rigid.velocity.y);
+        }
+
+        if (Input.GetButton("Horizontal") && !gameVariable.isTalk)
+        {
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        }
+    }
+
     void animationMove()
     {
         if (Mathf.Abs(rigid.velocity.x) < 0.3)
@@ -84,7 +103,15 @@ public class playerMove : MonoBehaviour
                 speicalMove();
                 animationMove();
             }
-        }else{
+        }
+        else if (scene.name == "2_hallway1F" || scene.name == "3_hallway2F" || scene.name == "7_hallway2F"
+            || scene.name == "8_hallway1F" || scene.name == "10_hallway1F" || scene.name == "14_hallway1F" || scene.name == "15_hallway2F")
+        {
+            speicalMove2();
+            animationMove();
+        }
+        
+        else{
             speicalMove();
             animationMove();
         }

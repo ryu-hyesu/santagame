@@ -21,7 +21,13 @@ public class soundManager : MonoBehaviour
         {
             //Debug.Log("음악x");
             //audioSource.Pause();
-            Destroy(soundManager.instance.gameObject);
+            if (instance == null)
+                instance = this;
+            else if (instance != this)
+            {
+                Destroy(soundManager.instance.gameObject);
+                instance = this;
+            }
         }
         else if (scene.name == "street")
         {
@@ -34,7 +40,6 @@ public class soundManager : MonoBehaviour
             }
             DontDestroyOnLoad(gameObject);
         }
-
         else
         {
             // SoundManager 인스턴스가 이미 있는지 확인, 이 상태로 설정
@@ -42,7 +47,7 @@ public class soundManager : MonoBehaviour
                 instance = this;
 
             // 인스턴스가 이미 있는 경우 오브젝트 제거
-            else if (instance != this || scene.name == "5_game1")
+            else if (instance != this)
                 Destroy(gameObject);
 
             DontDestroyOnLoad(gameObject);
