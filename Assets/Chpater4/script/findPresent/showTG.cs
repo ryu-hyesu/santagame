@@ -52,14 +52,6 @@ public class showTG : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
 
-        
-
-        while (accumTime < fadeTime)
-        {
-            guideGroup.alpha = Mathf.Lerp(1f, 0f, accumTime / fadeTime);
-            yield return 0;
-            accumTime += Time.deltaTime;
-        }
         guideGroup.alpha = 0f;
 
         gameVariable.isTalk = false;
