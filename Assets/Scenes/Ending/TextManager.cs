@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
-    Dictionary<int, string[]> textData;
+    public Dictionary<int, string[]> textData;
 
-    void Start()
+    void Awake()
     {
         textData = new Dictionary<int, string[]>();
         Generate();
@@ -14,10 +14,6 @@ public class TextManager : MonoBehaviour
 
     void Generate()
     {
-        //Prologue, id = 100
-        //textData.Add(100, new string[] { "���ѷα�1", "���ѷα�2", "���ѷα�3", "���ѷα� ��" });
-
-        //Ending, id = 200
         textData.Add(200, new string[] { 
             "모든 아이에겐 산타가 필요하다.",
             "비록 할아버지를 별로 좋아하지 않는 산타의 손자일지라도…….",
@@ -53,9 +49,9 @@ public class TextManager : MonoBehaviour
 
     public string GetStory(int id, int textIndex)
     {
-        if (textIndex == textData[id].Length)
-            return null;
-        else
+        if (textData.ContainsKey(id) && textIndex < textData[id].Length)
             return textData[id][textIndex];
+        else
+            return null;
     }
 }

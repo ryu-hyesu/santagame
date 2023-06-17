@@ -16,28 +16,51 @@ public class StoryManager : MonoBehaviour
     public void Story()
     {
         StoryData storyData = GetComponent<StoryData>();
-        Text(storyData.id);
-        //storyText.text = "";
+        Text(200);
     }
+
+    private void Start()
+    {
+        textIndex = 1;
+        Story();
+    }
+
+    bool isStart = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Story();
+            if (isStart)
+            {
+                Story();
+                isStart = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Story();
+            }
         }
     }
 
     void Text(int id)
     {
+        if (textManager == null)
+        {
+            Debug.LogError("TextManager instance is null. Make sure it is assigned in the inspector.");
+            return;
+        }
         string textData = textManager.GetStory(id, textIndex);
 
         if (textData == null)
+        {
             gm.moveScene("Book_start");
-
-        talktext = storyText.GetComponent<textEffect>();
-        talktext.SetMsg(textData);
-        textIndex++;
+        }
+        else
+        {
+            talktext = storyText.GetComponent<textEffect>();
+            talktext.SetMsg(textData);
+            textIndex++;
+        }
     }
-
 }
