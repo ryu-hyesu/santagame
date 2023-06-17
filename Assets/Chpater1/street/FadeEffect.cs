@@ -13,11 +13,6 @@ public class FadeEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(gameVariable.isGame);
-        Debug.Log(gameVariable.isTalk);
-        Debug.Log(gameVariable.noMove);
-        Debug.Log(Time.timeScale);
-
         if (image.color == new Color(0, 0, 0, 1))
         {
             StartCoroutine("FadeOut");

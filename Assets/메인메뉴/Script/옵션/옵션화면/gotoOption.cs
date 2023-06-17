@@ -21,31 +21,19 @@ public class gotoOption : MonoBehaviour
     [SerializeField] private GameObject go_baseUI;
     [SerializeField] private saveNload theSaveNLoad;
 
-    
+    private bool canExecuteCode = true;
 
-    void Start()
+    private IEnumerator Start()
     {
         isShowing = false;
         isPaused = false;
-
-    }
-
-    public void GameSave()
-    {
+        // 2초간 대기
+        yield return new WaitForSeconds(2f);
         
-        PlayerPrefs.SetString("Playerch", SceneManager.GetActiveScene().name.ToString());
-        Debug.Log(PlayerPrefs.GetString("Playerch"));
-        PlayerPrefs.Save();
+        // 코드 실행 가능 상태로 변경
+        canExecuteCode = true;
     }
-    public void GameLoad()
-    {
-        if(PlayerPrefs.HasKey("Playerch")) return;
 
-        string ch = PlayerPrefs.GetString("Playerch");
-        
-        if(SceneManager.GetActiveScene().Equals(ch))
-            SceneManager.LoadScene(ch);
-    }
     public void onClick(){
         
         switch(currentState){
@@ -94,7 +82,7 @@ public class gotoOption : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Cancel")){
+        if(Input.GetButtonDown("Cancel") && canExecuteCode){
             
             if(!isShowing) // isShowing is false일때만 esc 적용 가능
             {
