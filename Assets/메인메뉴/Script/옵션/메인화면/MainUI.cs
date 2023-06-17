@@ -53,8 +53,9 @@ public class MainUI : MonoBehaviour
             
             case BtnType.Continue:
                 Time.timeScale = 1.0f;
-                if(!PlayerPrefs.HasKey("Playerch")) return;
-                ch = PlayerPrefs.GetString("Playerch");
+                
+                ch = SaveManager.Instance.LoadSceneName();
+                Debug.Log(ch);
 
                 StartCoroutine("PlayFadeOut");
 

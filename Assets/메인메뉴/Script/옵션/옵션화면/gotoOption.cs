@@ -20,56 +20,47 @@ public class gotoOption : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject go_baseUI;
     [SerializeField] private saveNload theSaveNLoad;
+
+    
+
     void Start()
     {
         isShowing = false;
         isPaused = false;
+
     }
 
     public void GameSave()
     {
-        Debug.Log("dsfds");
-        //player.x, player.y;
-        //PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
-        //PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
-        PlayerPrefs.SetString("Playerch", SceneManager.GetActiveScene().ToString());
+        
+        PlayerPrefs.SetString("Playerch", SceneManager.GetActiveScene().name.ToString());
+        Debug.Log(PlayerPrefs.GetString("Playerch"));
         PlayerPrefs.Save();
     }
     public void GameLoad()
     {
         if(PlayerPrefs.HasKey("Playerch")) return;
 
-        //float x = PlayerPrefs.GetFloat("PlayerX");
-        //float y = PlayerPrefs.GetFloat("PlayerY");
         string ch = PlayerPrefs.GetString("Playerch");
         
         if(SceneManager.GetActiveScene().Equals(ch))
             SceneManager.LoadScene(ch);
-        //player.transform.position = new Vector3(x,y,0);
     }
     public void onClick(){
         
         switch(currentState){
             case BtnType.Continue:
-            // 플레이어의 위치
-            // sence 번호
-                //theSaveNLoad.LoadData();
                 MenuGroup.SetActive(false);
                 panel.SetActive(false);
                 break;
             case BtnType.Save:
-            // 플레이어의 위치
-            // sence 번호
-                Debug.Log("fff");
-                GameSave();
-                Debug.Log("fff2");
+                SaveManager.Instance.SaveSceneName();
                 break;
 
             case BtnType.Option:
                 isShowing = true;
                 MenuGroup.SetActive(false);
                 optionGroup.SetActive(true);
-                
                 break;
             
              case BtnType.Sound:
