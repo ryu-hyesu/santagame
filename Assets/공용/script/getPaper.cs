@@ -106,7 +106,7 @@ public class getPaper : MonoBehaviour
             if(step==0){
                 step += 1;
                 textBackground.SetActive(true);
-                StartCoroutine(FadeIn(txtImg, 0.8f));
+                StartCoroutine(FadeIn(txtImg, 0.6f));
             } else if(step==1){
                 step += 1;
                 fade.SetActive(true);
